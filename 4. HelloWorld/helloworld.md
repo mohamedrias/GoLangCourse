@@ -1,5 +1,7 @@
 Packages are required to refer libraries within a package.
 
+`import` statement is used to import the dependency libraries required for the our program.
+
 In this example, we will refer to "fmt" library.
 
 You can also create an alias for the "fmt" library as well using
