@@ -23,4 +23,5 @@ go run src/foldername/filename.go
 ## to create executable
 
 go install foldername
+
 // the folder name must be the name inside src folder
