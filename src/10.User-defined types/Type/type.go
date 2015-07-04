@@ -1,1 +1,0 @@
-//TODO: explain about Type construct
