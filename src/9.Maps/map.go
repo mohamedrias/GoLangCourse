@@ -18,4 +18,14 @@ func main() {
 	for key,value := range referenceData {
 		fmt.Println(key,value)
 	}
+	
+	/*
+		Skipping the key/value
+		_ is used to skip the value. It can be used not only in the map
+		but also in terms of functions as well.
+	*/
+	
+	for _,value := range referenceData {
+		fmt.Println(value)
+	}
 }
