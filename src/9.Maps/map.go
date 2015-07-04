@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"	
+)
 
 func main() {
 	
@@ -58,8 +61,7 @@ func main() {
 	
 
 	/*
-		Iterating maps is similar to that of arrays & slices
-		we can use _ for skipping the key if required
+		Iterating maps is similar to that of arrays & slices.
 	*/
 	for key,value := range referenceData {
 		fmt.Println(key,value)
@@ -75,7 +77,22 @@ func main() {
 		fmt.Println(value)
 	}
 	
+	/*
+		In Map, the iteration order is not guaranteed.
+		If the iteration order has to be maintained, then we've to
+		manually maintain the order
+	*/
 	
 	
+
+	var employeesMap map[int]string{}
+	var keys []string // slice for maintaining the order
+	for k := range employeesMap {
+	    keys = append(keys, k) // apending all keys to the slice
+	}
+	sort.Strings(keys) // sort the keys as required
+	for _, k := range keys {
+	    fmt.Println("Key:", k, "Value:", employeesMap[k])
+	}
 	
 }
